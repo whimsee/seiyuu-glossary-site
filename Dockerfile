@@ -73,6 +73,7 @@ ENV PATH="/opt/venv/bin:$PATH"
 # create directories
 RUN mkdir -p /app-data /app/otterwiki
 VOLUME /app-data
+COPY repository /app-data/repository
 RUN chown -R www-data:www-data /app-data
 # copy static files for nginx
 COPY otterwiki/static /app/otterwiki/static
